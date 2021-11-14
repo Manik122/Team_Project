@@ -15,7 +15,7 @@ module.exports.displaySurveyList = (req, res, next) => {
         }
         else
         {
-            //console.log(BookList);
+            //console.log(surveyList);
 
             res.render('survey/list', 
             {title: 'Surveys', 
@@ -47,7 +47,7 @@ module.exports.processAddPage = (req, res, next) => {
         }
         else
         {
-            // refresh the book list
+            // refresh the survey list
             res.redirect('/survey-list');
         }
     });
@@ -92,7 +92,7 @@ module.exports.processEditPage = (req, res, next) => {
         }
         else
         {
-            // refresh the book list
+            // refresh the survey list
             res.redirect('/survey-list');
         }
     });
@@ -109,7 +109,7 @@ module.exports.performDelete = (req, res, next) => {
         }
         else
         {
-             // refresh the book list
+             // refresh the survey list
              res.redirect('/survey-list');
         }
     });
