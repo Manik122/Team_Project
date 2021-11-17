@@ -8,6 +8,15 @@ let Survey = require('../models/survey');
 
 
 let surveyController = require('../controllers/survey');
+function requireAuth(req, res, next)
+{
+    //check user status
+    if(!req.isAuthenticated()) //if user is not logged in
+    {
+        return res.redirect('/login');
+    }
+    next();
+}
 
 /* GET Route for the Book List page - READ Operation */
 router.get('/', surveyController.displaySurveyList);
